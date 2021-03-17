@@ -33,6 +33,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .link {
@@ -51,29 +52,15 @@ img {
   height: auto;
 }
 
-.button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-  background-color: var(--team-bg-color);
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-  color: var(--hero-text-color);
-  background-color: var(--accent-color);
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Шапка */
 
 .header {
-  border-color: #ececec;
-  border-bottom: 1px;
+  border-bottom: 1px solid #ececec;
   background-color: var(--hero-text-color);
 }
 .logo {
@@ -148,17 +135,17 @@ img {
 
 /* Герой */
 
-.hero {
+.hero-section {
   text-align: center;
   background-color: #2f303a;
-  margin-bottom: 94px;
+  padding-bottom: 200px;
+  padding-top: 200px;
 }
 .hero-button {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-weight: 700;
   font-size: 16px;
@@ -185,11 +172,6 @@ img {
   color: var(--hero-text-color);
 }
 
-.hero-content {
-  padding-bottom: 200px;
-  padding-top: 200px;
-}
-
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -202,10 +184,9 @@ img {
 }
 
 /* Особенности компании */
-.features {
-  margin-bottom: 94px;
+.features-section {
+  padding-bottom: 0;
 }
-
 .features-list {
   display: flex;
 }
@@ -228,10 +209,6 @@ img {
 
 /* Направления работы */
 
-.directions {
-  padding-bottom: 94px;
-}
-
 .section-title {
   margin-bottom: 50px;
 
@@ -252,12 +229,8 @@ img {
 }
 
 /* Команда */
-.team-section .section-title {
-  padding-top: 94px;
-}
 .team-section {
   background-color: var(--team-bg-color);
-  padding-bottom: 94px;
 }
 
 .team-list {
@@ -283,17 +256,59 @@ img {
   padding-bottom: 30px;
 }
 
-.team-content p {
-  margin-bottom: 0px;
-}
-
 /* Портфолио */
 
+.filter-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.filter-list .item:not(:last-child) {
+  padding-right: 8px;
+}
+
+.button {
+  padding: 6px 22px;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  background-color: var(--team-bg-color);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+}
+
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 1.87;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio-list .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-content {
+  padding: 20px 24px;
 }
 .portfolio-name {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
